@@ -9,15 +9,13 @@ public class Server {
         sf.setResourceClasses(HelloService.class);
         sf.setResourceProvider(HelloService.class, 
             new SingletonResourceProvider(new HelloService()));
-        sf.setAddress("http://localhost:9000/");
-
+        sf.setAddress("http://localhost:19001/");
         sf.create();
     }
 
     public static void main(String args[]) throws Exception {
         new Server();
         System.out.println("Server ready...");
-
         Thread.sleep(5 * 6000 * 1000);
         System.out.println("Server exiting");
         System.exit(0);
